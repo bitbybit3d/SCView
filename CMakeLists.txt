@@ -47,8 +47,9 @@ add_subdirectory( ${STEPCODE_ROOT_DIR} "${CMAKE_CURRENT_BINARY_DIR}/sc" EXCLUDE_
 # QT ui files and MOCable headers
 set( MOC_HDRS
      MainWindow.h EntityDescriptorWidget.h SCLDockWidget.h expressg/ExpressGView.h
-     expressg/ExpressGScene.h EntityTypeList.h manhattanstyle.h styleanimator.h
-	 ExpressViewDockWidget.h ExpressTextEdit.h ExpressSyntaxHighlighter.h
+     expressg/ExpressGScene.h manhattanstyle.h styleanimator.h
+	 textView/ExpressViewDockWidget.h textView/ExpressTextEdit.h textView/ExpressSyntaxHighlighter.h
+	 SchemaTree.h SchemaTreeDockWidget.h
 )
 set( UI_FILES
      EntityDescriptorWidget.ui  MainWindow.ui
@@ -64,8 +65,9 @@ set( SRCS
     SchemaTree.cpp                 expressg/LinkItem.cpp      NavigateCommand.cpp
     expressg/EntityItem.cpp        expressg/TypeItem.cpp      SCLDockWidget.cpp
     expressg/ExpressgRectItem.cpp  main.cpp                   styleanimator.cpp
-    expressg/ExpressGScene.cpp     MainWindow.cpp             ExpressViewDockWidget.cpp
-    ExpressTextEdit.cpp            ExpressSyntaxHighlighter.cpp
+    expressg/ExpressGScene.cpp     MainWindow.cpp             textView/ExpressViewDockWidget.cpp
+    textView/ExpressTextEdit.cpp   textView/ExpressSyntaxHighlighter.cpp
+	SchemaTreeDockWidget.cpp
 )
 
 set( HDRS
@@ -74,7 +76,8 @@ set( HDRS
     expressg/EntityItem.h        expressg/TypeItem.h      styleanimator.h
     expressg/ExpressgRectItem.h  MainWindow.h
     expressg/ExpressGScene.h     manhattanstyle.h 
-	ExpressViewDockWidget.h      ExpressTextEdit.h        ExpressSyntaxHighlighter.h
+	textView/ExpressViewDockWidget.h      textView/ExpressTextEdit.h        textView/ExpressSyntaxHighlighter.h
+	SchemaTreeDockWidget.h
 )
 include_directories( ${STEPCODE_ROOT_DIR}/src/base ${STEPCODE_ROOT_DIR}/src/clstepcore
                      ${STEPCODE_ROOT_DIR}/src/cldai ${STEPCODE_ROOT_DIR}/src/clutils

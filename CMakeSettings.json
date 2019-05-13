@@ -1,0 +1,58 @@
+{
+  "configurations": [
+    {
+      "name": "x86-Debug",
+      "generator": "Visual Studio 15 2017",
+      "configurationType": "Debug",
+      "inheritEnvironments": [
+        "msvc_x86"
+      ],
+      "buildRoot": "${projectDir}\\..\\SCView-vs2017-build\\${name}",
+      "installRoot": "${projectDir}\\..\\SCView-vs2017-install\\${name}",
+      "variables": [
+        {
+          "name": "STEPCODE_ROOT_DIR",
+          "value": "${projectDir}\\..\\stepcode-git-fork"
+        },
+        {
+          "name": "SCHEMAS",
+          "value": "ap203;ifc4"
+        },
+        {
+          "name": "QTDIR",
+          "value": "G:\\sources\\contrib\\opencascade\\3rdParty\\qt486-vc14-32"
+        }
+      ],
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": ""
+    },
+    {
+      "name": "x64-Debug",
+      "generator": "Visual Studio 15 2017 Win64",
+      "configurationType": "Debug",
+      "inheritEnvironments": [
+        "msvc_x64_x64"
+      ],
+      "buildRoot": "${projectDir}\\..\\SCView-vs2017-build\\${name}",
+      "installRoot": "${projectDir}\\..\\SCView-vs2017-install\\${name}",
+      "variables": [
+        {
+          "name": "STEPCODE_ROOT_DIR",
+          "value": "${projectDir}\\..\\stepcode-git-fork"
+        },
+        {
+          "name": "SCHEMAS",
+          "value": "ap203;ifc4"
+        },
+        {
+          "name": "QTDIR",
+          "value": "C:\\Qt\\Qt5.10.1\\5.10.1\\msvc2017_64"
+        }
+      ],
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": ""
+    }
+  ]
+}

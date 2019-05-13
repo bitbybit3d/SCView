@@ -31,7 +31,7 @@ LinkItem::LinkItem(const AttrDescriptor * attrDescriptor, bool attributeIsOption
     QString name(attrDescriptor->Name());
     if (attrDescriptor->IsAggrType())
     {
-        QString rightSide (attrDescriptor->TypeName());
+        QString rightSide (attrDescriptor->TypeName().c_str());
         rightSide = rightSide.section(']',0,0);
         name += " : " + rightSide  + "]";
     }
