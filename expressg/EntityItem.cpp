@@ -70,6 +70,12 @@ EntityItem::EntityItem(const EntityDescriptor *entityDescriptor, QGraphicsItem *
     while( attrPtr != 0 )
     {
         const AttrDescriptor * attrDescriptor = attrPtr->AttrDesc();
+        if (attrDescriptor->AttrType() == AttrType_Deriving)
+        {
+            attrPtr = (AttrDescLinkNode *)attrPtr->NextNode();
+            attrCount++;
+            continue;
+        }
         attrIsAggregate = attrDescriptor->IsAggrType();
         childX = childXBase;
 

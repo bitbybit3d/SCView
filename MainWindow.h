@@ -53,6 +53,7 @@ public:
 
 private slots:
     void startSearch();
+    void takeSearch();
     void selectSearchResult(QString highlighted);
     void setDescriptorCommand(const TypeDescriptor * descriptor);
 

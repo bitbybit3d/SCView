@@ -116,6 +116,12 @@ void MainWindow::startSearch()
     m_SearchLineEdit->clear();
 }
 
+void MainWindow::takeSearch()
+{
+    QString inputStr = m_SearchLineEdit->text();
+    selectSearchResult(inputStr);
+}
+
 void MainWindow::selectSearchResult(QString highlighted)
 {
     QList<QTreeWidgetItem * > results = m_SchemaTree->findItems(highlighted, Qt::MatchFixedString |Qt::MatchCaseSensitive| Qt::MatchRecursive);
@@ -165,6 +171,7 @@ void MainWindow::buildView()
     completer->setCompletionMode(QCompleter::PopupCompletion);
     completer->setCaseSensitivity(Qt::CaseInsensitive);
     m_SearchLineEdit->setCompleter(completer);
+    connect(m_SearchLineEdit, &QLineEdit::returnPressed, this, &MainWindow::takeSearch);
     connect(completer, SIGNAL(highlighted(QString)), this, SLOT(selectSearchResult(QString)));
 
 }
