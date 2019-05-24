@@ -1,1 +1,6 @@
 .vs
+Libraryx64
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+Debug

@@ -17,15 +17,14 @@
     Boston, MA 02110-1301, USA.
 */
 
-#include <QtGui/QApplication>
+#include <QtWidgets/QApplication>
 #include "MainWindow.h"
-#include "manhattanstyle.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QString name = QApplication::style()->objectName();
-    QApplication::setStyle(new ManhattanStyle(name));
+//     QString name = QApplication::style()->objectName();
+//     QApplication::setStyle(new ManhattanStyle(name));
     a.setApplicationName("SCView");
     a.setApplicationVersion("V0.1");
     a.setOrganizationName("To_be_named.org");

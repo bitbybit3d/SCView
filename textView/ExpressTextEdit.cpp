@@ -62,8 +62,8 @@ void ExpressTextEdit::mouseMoveEvent(QMouseEvent *e)
     cursor.select(QTextCursor::WordUnderCursor);
     QString wordUnderCursor = cursor.selectedText();
 
-    const EntityDescriptor * entityDescriptor = m_Registry->FindEntity(wordUnderCursor.toAscii());
-    const TypeDescriptor * typeDescriptor = m_Registry->FindType(wordUnderCursor.toAscii());
+    const EntityDescriptor * entityDescriptor = m_Registry->FindEntity(wordUnderCursor.toLocal8Bit());
+    const TypeDescriptor * typeDescriptor = m_Registry->FindType(wordUnderCursor.toLocal8Bit());
     if (entityDescriptor )
     {
         std::string str;
@@ -123,8 +123,8 @@ void ExpressTextEdit::navigate(QMouseEvent *e)
     cursor.select(QTextCursor::WordUnderCursor);
     QString wordUnderCursor = cursor.selectedText();
 
-    const EntityDescriptor * entityDescriptor = m_Registry->FindEntity(wordUnderCursor.toAscii());
-    const TypeDescriptor * typeDescriptor = m_Registry->FindType(wordUnderCursor.toAscii());
+    const EntityDescriptor * entityDescriptor = m_Registry->FindEntity(wordUnderCursor.toLocal8Bit());
+    const TypeDescriptor * typeDescriptor = m_Registry->FindType(wordUnderCursor.toLocal8Bit());
     // TODO : ?????????!!!!!!!!!!!!????????
     if (entityDescriptor )
         emit descriptorDoubleClicked(entityDescriptor);

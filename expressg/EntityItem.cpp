@@ -147,11 +147,11 @@ EntityItem::EntityItem(const EntityDescriptor *entityDescriptor, QGraphicsItem *
         {
             attrDescriptor->AttrExprDefStr(str);
             cout << "Is Aggregate :" <<  str << " | " << attrDescriptor->TypeName() <<  endl;
-            cout << "Type pointé :" << attrDescriptor->AggrElemTypeDescriptor()->Name() << endl;
+            cout << "Type point?:" << attrDescriptor->AggrElemTypeDescriptor()->Name() << endl;
             const EntityDescriptor * referentEntityDescriptor = dynamic_cast<const EntityDescriptor *> ( attrDescriptor->AggrElemTypeDescriptor() );
             if (referentEntityDescriptor)
-                cout << "Type pointé EST une entité" << endl;
-            else cout << "Type pointé N'EST PAS une entité" << endl;
+                cout << "Type point?EST une entit? << endl;
+            else cout << "Type point?N'EST PAS une entit? << endl;
         }
 */
 
